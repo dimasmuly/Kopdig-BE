@@ -38,5 +38,24 @@ Route::get('/editprofile', [DashboardController::class,'editprofile'])->name('ed
 Route::get('/product', function(){
     return view('pages.product');
 })->name('product');
-Route::get('/market', [MarketController::class, 'market'])->name('market');
+
+
+/**
+ *  TODO: Untuk melihat routing dibawah ini silahkan anda membuka terminal dan kemudian ketikkan php artisan route:list --name=market
+ *  ? Akan muncul semua route dengan filter name = market
+ *
+ *  * By Dafrin, github: https://github.com/destroylord
+ *  * Please, Follow me!!
+ *
+ * */
+Route::prefix('/market')
+        ->name('market.')
+        ->controller(MarketController::class)
+        ->group(function(){
+            Route::get('/',  'market')->name('index');
+            Route::get('/barang', 'barang')->name('barang.index');
+            Route::get('detail-barang', 'detailBarang')->name('barang.detail');
+            Route::get('/notifikasi', 'notifikasi')->name('notifikasi');
+            Route::get('/checkout', 'checkout')->name('checkout');
+});
 

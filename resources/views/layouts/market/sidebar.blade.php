@@ -34,59 +34,48 @@
                 <li class="menu-title"><span >@lang('translation.menu')</span></li>
                  <!-- Dashboard Menu -->
                 <li class="nav-item">
-                    <a class="nav-link menu-link" target="_blank" href="#">
+                    <a class="nav-link menu-link" href="#">
                         <i class="ri-home-8-line"></i> <span data-key="t-landing">Dasboard</span>
 
                     </a>
                 </li>
                 <!-- End Dashboard Menu -->
 
-                <!-- Koperasi Menu -->
+                <!-- Unit Usaha Menu -->
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button"
-                        aria-expanded="false" aria-controls="sidebarAuth">
-                        <!-- <i class="ri-account-circle-line"></i> <span >@lang('translation.authentication')</span> -->
-                        <i class="ri-boxing-line"></i> <span >Koperasi</span>
+                    <a class="nav-link menu-link" href="{{ route('market.barang.index')}}">
+                        <i class="ri-shopping-bag-3-line"></i> <span data-key="t-landing">Semua Barang</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarAuth">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="#sidebarSignUp" class="nav-link" role="button"
-                                    aria-expanded="false" aria-controls="sidebarSignUp" >@lang('translation.signup')
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-                <!-- End Koperasi Menu -->
+                <!-- End Unit Usaha Menu -->
 
                 <!-- Unit Usaha Menu -->
                 <li class="nav-item">
-                    <a class="nav-link menu-link" target="_blank" href="landing">
-                        <i class="ri-shopping-bag-3-line"></i> <span data-key="t-landing">Unit Usaha</span>
+                    <a class="nav-link menu-link" href="{{ route('market.barang.detail')}}">
+                        <i class="ri-shopping-bag-3-line"></i> <span data-key="t-landing">Detail Jasa atau barang</span>
+                    </a>
+                </li>
+                <!-- End Unit Usaha Menu -->
+
+                <!-- Unit Usaha Menu -->
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('market.notifikasi')}}">
+                        <i class="ri-notification-3-line"></i> <span data-key="t-landing">Notifikasi</span>
+                    </a>
+                </li>
+                <!-- End Unit Usaha Menu -->
+
+                <!-- Unit Usaha Menu -->
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('market.checkout')}}">
+                        <i class="ri-chechkout-bag-3-line"></i> <span data-key="t-landing">Checkout</span>
                     </a>
                 </li>
                 <!-- End Unit Usaha Menu -->
 
                 <!-- Surat Menu -->
                 <li class="nav-item">
-                    <a class="nav-link menu-link" target="_blank" href="landing">
-                        <i class="ri-dropbox-fill"></i> <span data-key="t-landing">Persetujuan</span>
-                    </a>
-                </li>
-                <!-- End Surat Menu -->
-
-                 <!-- Laporan Menu -->
-                 <li class="nav-item">
-                    <a class="nav-link menu-link" target="_blank" href="landing">
-                        <i class="ri-settings-3-line"></i> <span data-key="t-landing">Pengaturan</span>
-                    </a>
-                </li>
-                <!-- End Laporan Menu Laporan -->
-
-                <!-- Surat Menu -->
-                <li class="nav-item">
-                    <a class="nav-link menu-link" target="_blank" href="landing">
+                    <a class="nav-link menu-link" href="landing">
                         <i class="ri-logout-box-line"></i> <span data-key="t-landing">Log Out</span>
                     </a>
                 </li>

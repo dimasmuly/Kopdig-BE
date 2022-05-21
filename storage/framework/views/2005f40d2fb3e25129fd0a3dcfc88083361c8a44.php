@@ -1,21 +1,19 @@
-@extends('layouts.market.app')
-
-@section('title')
-    @lang('translation.starter')
-@endsection
-@section('css')
+<?php $__env->startSection('title'); ?>
+    <?php echo app('translator')->get('translation.starter'); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('css'); ?>
 <link href="assets/libs/jsvectormap/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 <link href="assets/libs/swiper/swiper.min.css" rel="stylesheet" type="text/css" />
-@endsection
-@section('content')
-    @component('components.breadcrumb')
-        @slot('title')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+        <?php $__env->slot('title'); ?>
             Market
-        @endslot
-        @slot('li_1')
+        <?php $__env->endSlot(); ?>
+        <?php $__env->slot('li_1'); ?>
             Pages
-        @endslot
-    @endcomponent
+        <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
     <div class="row mb-3 pb-1">
         <div class="col-12">
             <div class="d-flex align-items-lg-center flex-lg-row flex-column">
@@ -607,11 +605,13 @@
      <!-- card -->
     <!-- end row-->
     <!-- end card -->
-@endsection
-@section('script')
-<script src="{{ URL::asset('/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
-<script src="{{ URL::asset('/assets/libs/jsvectormap/jsvectormap.min.js') }}"></script>
-<script src="{{ URL::asset('/assets/libs/swiper/swiper.min.js')}}"></script>
-<script src="{{ URL::asset('/assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
-<script src="{{ URL::asset('/assets/js/app.min.js') }}"></script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+<script src="<?php echo e(URL::asset('/assets/libs/apexcharts/apexcharts.min.js')); ?>"></script>
+<script src="<?php echo e(URL::asset('/assets/libs/jsvectormap/jsvectormap.min.js')); ?>"></script>
+<script src="<?php echo e(URL::asset('/assets/libs/swiper/swiper.min.js')); ?>"></script>
+<script src="<?php echo e(URL::asset('/assets/js/pages/dashboard-ecommerce.init.js')); ?>"></script>
+<script src="<?php echo e(URL::asset('/assets/js/app.min.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.market.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/destroylord/htdocs/Kopdig-BE/resources/views/pages/market/index.blade.php ENDPATH**/ ?>

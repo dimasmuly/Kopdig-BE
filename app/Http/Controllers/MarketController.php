@@ -10,4 +10,24 @@ class MarketController extends Controller
     {
         return view('pages.market.index');
     }
+
+
+    public function barang()
+    {
+        return view('pages.market.barang.index');
+    }
+
+    public function detailBarang(){
+        return view('pages.market.barang.detail');
+    }
+
+    public function notifikasi()
+    {
+        return view('pages.market.notifikasi');
+    }
+
+    public function checkout()
+    {
+        return view('pages.market.checkout');
+    }
 }
